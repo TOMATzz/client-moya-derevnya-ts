@@ -2,7 +2,7 @@ import Main from "../pages/Main";
 import React from "react";
 
 import Login from "../components/Login";
-import Registration from "../components/Registration";
+// import Registration from "../components/Registration";
 import User from "../pages/User";
 
 export interface IRoute {
