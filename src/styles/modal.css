@@ -1,0 +1,39 @@
+.modal.active {
+
+   transform: scale(0);
+}
+
+
+
+.modal {
+   backdrop-filter: blur(2px);
+   height: 100vh;
+   width: 100vw;
+   background-color: rgba(0, 0, 0, 0.4);
+   position: fixed;
+   top: 0;
+   left: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transform: scale(1);
+   /* pointer-events: none; */
+
+}
+
+.modal_btn {
+   display: flex;
+   justify-content: space-between;
+
+}
+
+.card,
+.card_l {
+
+
+   width: 400px;
+   border-color: PaleGreen;
+   background-color: rgba(152, 251, 152, 0.7);
+   background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0));
+   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}

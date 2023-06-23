@@ -1,0 +1,120 @@
+input {
+   background-color: rgba(0, 0, 0, 0);
+   text-align: left;
+   caret-color: red;
+
+}
+
+input::placeholder {
+   color: rgb(151, 98, 0);
+}
+
+.inputSugg {
+   outline-style: none;
+   width: 250px;
+   border: 1px solid PaleGreen;
+   line-height: 3;
+   padding: 0px 5px;
+   text-align: left;
+   color: rgb(5, 5, 5);
+   border-radius: 8px 8px 8px 8px;
+   background-color: rgba(152, 251, 152, 0.8);
+   background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.dropdown {
+   position: relative;
+   display: inline-block;
+}
+
+.dropdown-content,
+.warning-content,
+.empty-content {
+   width: 242px;
+   position: absolute;
+   left: 5px;
+   /* min-width: 160px; */
+   border-radius: 0px 0px 8px 8px;
+   background-color: rgba(152, 251, 152, 0.8);
+   background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.dropdown:focus .dropdown-content {
+   display: block;
+}
+
+#one,
+#two,
+#three {
+   line-height: 2;
+   width: 100%;
+   border: none;
+   outline-style: none;
+
+}
+
+#one:hover {
+   background-color: rgba(152, 251, 152, 0.5);
+   width: auto;
+   min-width: 242px;
+}
+
+#two:hover {
+   background-color: rgba(152, 251, 152, 0.5);
+   width: auto;
+   min-width: 242px;
+}
+
+#three:hover {
+   background-color: rgba(152, 251, 152, 0.5);
+   border-radius: 0px 0px 8px 8px;
+   width: auto;
+   min-width: 242px;
+}
+
+.input_container {
+   display: flex;
+   /* flex-wrap: wrap;
+   min-width: 300px; */
+}
+
+@media (max-width: 770px) {
+   .input_container {
+      flex-wrap: wrap-reverse;
+   }
+}
+
+.d33:before {
+   content: "";
+   width: 0;
+   height: 0;
+   position: absolute;
+   right: 100%;
+   top: 10px;
+   border-top: 12px solid transparent;
+   border-right: 40px solid rgba(152, 251, 152, 0.6);
+   border-bottom: 12px solid transparent;
+}
+
+.btn-false,
+.btn-true {
+   outline-style: none;
+
+}
+
+.warning {
+   text-align: center;
+   margin-top: 5px;
+   margin-bottom: 5px;
+   color: red
+}
+
+.warning_context {
+
+   margin-top: 5px;
+   margin-left: 5px;
+
+}

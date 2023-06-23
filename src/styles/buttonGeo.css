@@ -1,0 +1,44 @@
+.myButton {
+   border: 1px solid PaleGreen;
+   line-height: 2;
+   padding: 0px 5px;
+   font-size: 1rem;
+
+
+   /* text-justify: auto; */
+   text-align: center;
+   color: rgb(151, 98, 0);
+   cursor: pointer;
+   border-radius: 8px;
+   background-color: rgba(152, 251, 152, 0.6);
+   background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+/* .styled:hover {
+   background-color: rgba(255, 0, 0, 1);
+} */
+
+.myButton:active {
+   box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+
+.btnGeoImgSmall {
+   margin-bottom: 5px;
+   padding: 0px 2px;
+
+   vertical-align: middle;
+   background-color: rgba(152, 251, 152, 0.01);
+
+}
+
+.btnGeoImg {
+   margin-bottom: 3px;
+   padding-right: 5px;
+
+   vertical-align: middle;
+   background-color: rgba(152, 251, 152, 0.01);
+
+}
