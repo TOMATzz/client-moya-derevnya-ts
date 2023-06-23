@@ -1,4 +1,4 @@
-import { auto } from "@popperjs/core";
+
 import React from "react";
 
 export const headerStyle: React.CSSProperties = {

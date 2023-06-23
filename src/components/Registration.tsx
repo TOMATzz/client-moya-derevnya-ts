@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import { Button, Form, Input, Row, Card, Space } from "antd";
+import { FC } from 'react';
+import { Form, Input, Card } from "antd";
 // import { useDispatch } from 'react-redux';
 
 import { setIsClickButtonRegistration } from '../store/userClickBattonRegistration';
@@ -93,12 +93,14 @@ const Registration: FC = () => {
 
                <input
                   type="image"
+                  alt="Изображение не загружено"
                   src={button_true}
                   style={{ marginRight: 10 }}
                />
 
                <input
                   type="image"
+                  alt="Изображение не загружено"
                   src={button_false}
 
                   onClick={() => dispatch(setIsClickButtonRegistration(false))}

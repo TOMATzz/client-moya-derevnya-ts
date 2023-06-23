@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef, useState } from 'react';
+import React, { FC, useEffect, useRef } from 'react';
 import { useYMaps } from '@pbe/react-yandex-maps';
 import { setUserGeoCoords } from '../../store/userGeoCoordsSlice';
 import { useTypedDispatch, useTypedSelector } from '../../hooks/useTypedSelector';
@@ -56,7 +56,7 @@ export const MyMap: FC = () => {
       if (!ymaps || !mapRef.current) {
          return;
       }
-
+      // eslint-disable-next-line
       myMap = new ymaps.Map(mapRef.current, {
          center: userGeo,
          zoom: 10,
@@ -92,7 +92,7 @@ export const MyMap: FC = () => {
 
          }, (error) => { console.log(error) });
 
-         if (userClickButtonCloseInput == false) dispatch(setIsClickGeoButton(true))
+         if (userClickButtonCloseInput === false) dispatch(setIsClickGeoButton(true))
 
 
       });
@@ -144,13 +144,13 @@ export const MyMap: FC = () => {
    if (ymaps) {
 
       //  балун на метке геоположения пользователя
-      if (ymaps && userClickGeoButton && userClickButtonCloseInput == false) {
+      if (ymaps && userClickGeoButton && userClickButtonCloseInput === false) {
 
 
          var BalloonContentLayout: any = ymaps.templateLayoutFactory.createClass(
 
             // Создаем инпут
-
+            // eslint-disable-next-line
             '<div class="dropdown">' + '<div class="d33"></div>' +
             '<div class="input_container">' +
             '<input  class="inputSugg" type="text"  placeholder="Не соответствует ?, введите адрес:" value=""  >' +
@@ -210,7 +210,7 @@ export const MyMap: FC = () => {
                         '</div>');
                   }
                   // если длинна строки ввода в инпут равна 0 ,то удаляем выпадающей список
-                  if (textGeoInput.length == 0) {
+                  if (textGeoInput.length === 0) {
 
                      $("div ").remove(".dropdown-content");
                   }
@@ -258,16 +258,20 @@ export const MyMap: FC = () => {
                   // запоминаем что кнопку галка нажали
                   dispatch(setIsClickButtonOkInput(true))
                   // исключаем многократное нажатие
-                  if (!event.detail || event.detail == 1) {
+                  if (!event.detail || event.detail === 1) {
                      //если выпадающий список есть закрываем его
 
                      if ($(".dropdown-content").length) {
                         $("div ").remove(".dropdown-content");
                      }
                      // если в инпуте ничего нет,выводим предупреждение
+                     // eslint-disable-next-line
                      if (!$('.inputSugg').val()) {
                         $(".dropdown").append(
+                           // eslint-disable-next-line
+
                            '<div  class="empty-content">' +
+                           // eslint-disable-next-line
                            '<h4 class="warning">Введите адрес!</h4>' + '</div>');
 
                      }
@@ -292,6 +296,7 @@ export const MyMap: FC = () => {
                               if (!$(".warning-content").length)
                                  $(".dropdown").append(
                                     '<div  class="warning-content">' +
+                                    // eslint-disable-next-line
                                     '<h4 class="warning"> Адрес не найден в базе!</h4>' + '<p class="warning_context"> Попробуйте ближайший населенный пункт или улицу </p>' + '</div>');
 
 

@@ -1,5 +1,5 @@
-import React, { FC, useState } from 'react';
-import { Button, Row, Switch } from "antd";
+import { FC } from 'react';
+import { Button, Row } from "antd";
 import { useNavigate } from "react-router-dom";
 import { RouteNames } from "../routes";
 import logiSite from "../images/logoSite.png"
@@ -10,9 +10,10 @@ import Registration from './Registration';
 import { useTypedDispatch, useTypedSelector } from '../hooks/useTypedSelector';
 import { setIsClickButtonRegistration } from '../store/userClickBattonRegistration';
 import button_home from '.././images/green-house_l.png'
-import Link from 'antd/es/typography/Link';
+
 import { setIsClickButtonLogin } from '../store/userClickButtonLogin';
 import Login from './Login';
+
 
 const NavBar: FC = () => {
    const navigate = useNavigate()
@@ -33,7 +34,7 @@ const NavBar: FC = () => {
          <Row justify="space-between">
 
 
-            <img className='logoSite' src={logiSite} onClick={() => { navigate(RouteNames.MAIN) }}></img>
+            <img className='logoSite' alt="Изображение не загружено" src={logiSite} onClick={() => { navigate(RouteNames.MAIN) }}></img>
 
             <div >
 
@@ -46,17 +47,18 @@ const NavBar: FC = () => {
 
 
                      <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <a
+                        <span
                            className='authButtonNavBar'
                            onClick={() => dispatch(setIsClickButtonRegistration(true))}
                         >
                            Регистрация
 
-                        </a>
+                        </span>
 
 
                         <input
                            type="image"
+                           alt="Изображение не загружено"
                            style={{ height: '30px', width: '37px', marginRight: 10 }}
                            src={button_home}
                            onClick={() => dispatch(setIsClickButtonLogin(true))}

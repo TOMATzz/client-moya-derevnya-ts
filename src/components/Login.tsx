@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
-import { Button, Card, Checkbox, Form, Input, Row } from 'antd';
-import { useNavigate } from "react-router-dom";
+import { FC } from 'react';
+import { Card, Checkbox, Form, Input } from 'antd';
+
 import Link from "antd/es/typography/Link";
 import ".././styles/counter.css"
 import "../styles/modal.css"
@@ -17,7 +17,7 @@ const Login: FC = () => {
 
    //----------------------------------------------------
 
-   const navigate = useNavigate();
+
 
    const dispatch = useTypedDispatch()
    const onFinish = (values: any) => {
@@ -87,12 +87,14 @@ const Login: FC = () => {
 
                <input
                   type="image"
+                  alt="Изображение не загружено"
                   src={button_true}
                   style={{ marginRight: 10 }}
                />
 
                <input
                   type="image"
+                  alt="Изображение не загружено"
                   src={button_false}
 
                   onClick={() => dispatch(setIsClickButtonLogin(false))}

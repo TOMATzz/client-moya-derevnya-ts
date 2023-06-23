@@ -7,12 +7,12 @@ export interface IGeoBtn {
 
 
 export const GeoBtn: IGeoBtn = {
-   createButton: (ymaps: any, myMap: any, textBtn: string, classBtn: string) => {
+   createButton: (ymaps: any, myMap: any, textBtn: string = '', classBtn: string = 'btnGeoImgSmall') => {
 
 
       if (myMap.container.getSize()[0] < 400) {
 
-         var textBtn = '', classBtn = 'btnGeoImgSmall'
+
       }
       return new ymaps.control.Button({
          data: { content: textBtn, image: greenArrow, },
